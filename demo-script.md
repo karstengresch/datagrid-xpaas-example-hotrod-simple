@@ -57,7 +57,7 @@ done
         $ oc delete all --all
 
 ###################
-# Persistance
+# Persistence
 ###################
 # myapp-demo2.apps.osedemo.com
 
