@@ -62,7 +62,7 @@ done
 # myapp-demo2.apps.osedemo.com
 
 ```
-APP_PATH=$(oc describe route myapp | grep "^Host:" | awk '{ print $2 }')
+APP_PATH=$(oc describe route myapp | grep "Host:" | awk '{ print $3 }')
 for key in {0..100}
 do
   curl -X PUT -d "DATA for key $key
