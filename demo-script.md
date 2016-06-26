@@ -28,7 +28,7 @@ $ curl https://raw.githubusercontent.com/jboss-openshift/application-templates/m
 3. Use curl to enter some data into the cluster
 
 ```
-APP_PATH=$(oc describe route myapp | grep "^Host:" | awk '{ print $2 }')
+APP_PATH=$(oc describe route myapp | grep "Host:" | awk '{ print $3 }')
 for key in {0..100}
 do
   curl -X PUT -d "DATA for key $key
