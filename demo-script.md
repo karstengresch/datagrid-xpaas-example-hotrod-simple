@@ -61,9 +61,11 @@ done
 ###################
 # myapp-demo2.apps.osedemo.com
 
+```
 APP_PATH=$(oc describe route myapp | grep "^Host:" | awk '{ print $2 }')
 for key in {0..100}
 do
   curl -X PUT -d "DATA for key $key
 " http://${APP_PATH}/rest/mycache/$key
 done
+```
